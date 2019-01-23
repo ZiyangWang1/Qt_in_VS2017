@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PictureDecoderClass</class>
+ <widget class="QWidget" name="PictureDecoderClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PictureDecoder</string>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1041</width>
+     <height>611</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="OpenFile_Btn">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>630</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="PictureDecoder.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>on_OpenFile_Btn_clicked()</slot>
+ </slots>
+</ui>
