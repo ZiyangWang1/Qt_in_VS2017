@@ -11,6 +11,7 @@ class PictureDecoder : public QWidget
 private slots:
 	void on_OpenFile_Btn_clicked();
 
+	void on_toRGB16_Btn_clicked();
 
 public:
 	PictureDecoder(QWidget *parent = Q_NULLPTR);

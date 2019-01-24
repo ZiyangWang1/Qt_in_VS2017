@@ -22,6 +22,7 @@ class Ui_PictureDecoderClass
 public:
     QTextEdit *textEdit;
     QPushButton *OpenFile_Btn;
+    QPushButton *toRGB16_Btn;
 
     void setupUi(QWidget *PictureDecoderClass)
     {
@@ -33,7 +34,10 @@ public:
         textEdit->setGeometry(QRect(10, 10, 1041, 611));
         OpenFile_Btn = new QPushButton(PictureDecoderClass);
         OpenFile_Btn->setObjectName(QString::fromUtf8("OpenFile_Btn"));
-        OpenFile_Btn->setGeometry(QRect(480, 630, 93, 28));
+        OpenFile_Btn->setGeometry(QRect(202, 630, 121, 28));
+        toRGB16_Btn = new QPushButton(PictureDecoderClass);
+        toRGB16_Btn->setObjectName(QString::fromUtf8("toRGB16_Btn"));
+        toRGB16_Btn->setGeometry(QRect(630, 630, 93, 28));
 
         retranslateUi(PictureDecoderClass);
 
@@ -43,7 +47,8 @@ public:
     void retranslateUi(QWidget *PictureDecoderClass)
     {
         PictureDecoderClass->setWindowTitle(QApplication::translate("PictureDecoderClass", "PictureDecoder", nullptr));
-        OpenFile_Btn->setText(QApplication::translate("PictureDecoderClass", "Open", nullptr));
+        OpenFile_Btn->setText(QApplication::translate("PictureDecoderClass", "Binarization", nullptr));
+        toRGB16_Btn->setText(QApplication::translate("PictureDecoderClass", "toRGB16", nullptr));
     } // retranslateUi
 
 };

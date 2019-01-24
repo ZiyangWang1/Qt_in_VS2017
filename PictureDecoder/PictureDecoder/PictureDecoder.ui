@@ -26,14 +26,27 @@
   <widget class="QPushButton" name="OpenFile_Btn">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>202</x>
+     <y>630</y>
+     <width>121</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Binarization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="toRGB16_Btn">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
      <y>630</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Open</string>
+    <string>toRGB16</string>
    </property>
   </widget>
  </widget>

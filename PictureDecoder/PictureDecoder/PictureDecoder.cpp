@@ -9,10 +9,10 @@ PictureDecoder::PictureDecoder(QWidget *parent)
 void PictureDecoder::on_OpenFile_Btn_clicked()
 {
 	//QString fileName = QFileDialog::getOpenFileName(this, tr("open file"), " ", tr("Allfile(*.*)"));
-	QString fileName = "C:\\Users\\Darren Wong\\Documents\\GitHub\\target\\target01";
+	QString fileName = "C:\\Users\\Darren Wong\\Documents\\target\\target01";
 	QString currentFile;
 	QImage image;
-	QString num1, num2;
+	QString num1;
 	QString OutputLine;
 	unsigned char u8Output = 0;
 	int  counter = 0;
@@ -66,4 +66,37 @@ void PictureDecoder::on_OpenFile_Btn_clicked()
 		ui.textEdit->append("},");
 	}
 
+}
+
+void PictureDecoder::on_toRGB16_Btn_clicked()
+{
+	QString fileName = QFileDialog::getOpenFileName(this, tr("open file"), " ", tr("Allfile(*.*)"));
+	QImage image=QImage(fileName,nullptr);
+	QString num1;
+	QString OutputLine;
+	unsigned long u32Output = 0;
+	int  counter = 0;
+	QRgba64 color;
+
+	ui.textEdit->clear();
+	for (int i = 0; i < 600; i++)
+	{
+		for (int j = 0; j < 375; j++)
+		{
+			color = QRgba64::fromArgb32(image.pixel(i, j));
+			u32Output = color.toRgb16();
+			//u32Output = image.pixel(i, j);
+			OutputLine += "0x" + num1.setNum(u32Output, 16) + ",";
+			counter++;
+
+			if (counter == 8)
+			{
+				ui.textEdit->append(OutputLine);
+				OutputLine.clear();
+				counter = 0;
+			}
+		}
+	}
+	
+	ui.textEdit->append("test!");
 }
